@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 
 def DataSet():
     # 读数据
-    AQI = np.genfromtxt("数据/成都AQI.csv", delimiter=",")
+    AQI = np.genfromtxt("成都AQI.csv", delimiter=",")
     # 取所有的行，和第一列之后的数据，因为第一列是标签，后面的是特征
     # PM2.5/PM10/SO2/CO/NO2/O3_8h
     X = AQI[:, 1:]
@@ -22,7 +22,7 @@ def DataSet():
 
 def DataSet_Random(random_state):
     # 读数据
-    AQI = np.genfromtxt("数据/成都AQI.csv", delimiter=",")
+    AQI = np.genfromtxt("成都AQI.csv", delimiter=",")
     X = AQI[:, 1:]
     X = X[1:, ]
     # 标签第一列
@@ -35,7 +35,7 @@ def DataSet_Random(random_state):
 # 全部的数据
 def DataSet_All():
     # 读数据
-    AQI = np.genfromtxt("数据/成都AQI.csv", delimiter=",")
+    AQI = np.genfromtxt("成都AQI.csv", delimiter=",")
     # 取所有的行，和第一列之后的数据，因为第一列是标签，后面的是特征
     # PM2.5/PM10/SO2/CO/NO2/O3_8h
     X = AQI[:, 1:]
